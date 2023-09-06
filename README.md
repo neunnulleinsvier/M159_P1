@@ -29,11 +29,15 @@ Objekt Identifier ist eine Eindeutige Nummer zur Identifikation von Objekten und
 * Singlemaster: Ein Server der für eine Bestimmte änderungen verantwortlich
 * Multi-Master: Mehrer Server können Änderungen vornehmer
 
-##Domain Name System (DNS)
+## 3. Domain Name System (DNS)
 ### Hierarchischer Aufbau und Eigenschaften
-
+Das Domain Name System (DNS) hat einen hierarchischen Aufbau, der aus mehreren Ebenen besteht. An oberster Stelle steht die Root-Domain, die von einer begrenzten Anzahl von Root-Servern verwaltet wird. Darunter befinden sich Top-Level-Domains (TLDs), wie .com, .org und Länderkennungen wie .de. Diese TLDs sind wiederum in Subdomains unterteilt, die von verschiedenen Organisationen oder Unternehmen verwaltet werden. Schließlich stehen unter den Subdomains die eigentlichen Domain-Namen, die IP-Adressen und andere DNS-Einträge verweisen. Dieser hierarchische Aufbau ermöglicht die effiziente Auflösung von Domain-Namen in IP-Adressen im gesamten Internet.
 ###Zonentypen im DNS
 * Primärzone: Die Ursprüngliche Quelle für DNS-Daten
 * Sekundärzone: Eine Kopie der Primärzone zu Redundanz-Zwecken
 * Subzone: Enthält verweise auf DNS-Server anderer Domänen
 * AD-Integrierte Zone: Speichert DNS-Zonendaten im AD
+
+## 4. Domäne und Standort
+
+### Domänenmodell verstehen und grafische Darstellung der Domänen analysieren.
