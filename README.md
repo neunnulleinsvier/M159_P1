@@ -40,4 +40,61 @@ Das Domain Name System (DNS) hat einen hierarchischen Aufbau, der aus mehreren E
 
 ## 4. Domäne und Standort
 
-### Domänenmodell verstehen und grafische Darstellung der Domänen analysieren.
+### 4.1	Domänenmodell. Sie kennen die grafische Darstellung von Domänen und erklären die Eigenschaften (Sicherheitsgrenzen, Schutzschema, DC Empfehlungen, Replikation DC, RODC). 
+* #### Logische Sicht
+* Mit Dreiecken dargestellt
+* Grundsätzlich nur eine Domäne
+* Zwei DCs Pro Domäne einzeichnen
+* Weiter Domänen nur bei:
+  * Schemaschutz
+  * Autonome, eigenständige Verwaltung
+  * Bei ‘Eigenen’ Sicherheitsbereich
+* #### Physische Sicht
+  * Durch Ovale Kreise dargestellt
+  * Bei üblicher WAN-Verbindung -> 1 DC pro Standort.
+  * Bei Hochgeschw. 1 DC für alle Standorte.
+### Eigenschaften von Domänen
+* Sicherheitsgrenzen -> Domänengrenzen
+* Der Admin einer übergeordneten Domäne hat nicht automatisch alle Rechte-
+* Die Objekte werden durch ein einheitliches Namenskonzept schnell gefunden.
+* Schutzschema
+* DC-Empfehlungen
+* Zwei DCs für Redundanz -> Ausfall Sicherheit
+* Replikation DC
+* Vermeidung eines SPOF
+* DCs kopieren sich gegenseitig.
+* Jeder DC enthält alle Objekte der Domäne
+* RODC -> Read Only DC
+  * Nicht alle Objekte werden repliziert.
+
+### 4.2	Welche Strukturierungsmöglichkeiten bietet die Organisational Unit (OU). Nennen Sie Praxisbeispiele zu den Themen «Abbilden der Firmenstruktur», «Verwaltungstätigkeiten», «Gruppenrichtlinien» und «Sichtbarkeit».
+* #### Eigenschaften OUs:
+  * OUs bieten Unterteilung der Domäne in eigene Unternehmen/Abteilungen an
+  * OUs könne verschiedene Objekte beinhalten.
+* #### Strukturierungsmöglichkeiten mit OUs 
+  * Abbilde den Firmenstruktur durch OUs.
+  * Zuweisung von Verwaltungstätigkeiten durch einen Admin.
+  * Gruppenrichtlinien anwenden 
+  * Sichtbarkeit: nur User mit Leseberechtigung sehen für OUs sehen den OU-Inhalt.
+
+### 4.3	Sie kennen die Unterschiede zwischen Einzeldomäne, Domänenstruktur (Tree), Gesamtstruktur (Forest) und Mehrgesamtstruktur (Multi-Forest).
+Einzeldomänen (Single Domain)
+Geeignet für die meisten Fälle
+Einzelne DC
+Beinhalte alle Netzwerk Ressourcen
+ 
+Tree (Baum)
+Nur nötig bei:
+Unabhängiger Verwaltung
+Wenn Stammdomäne keine Produktionsobjekt enthalten soll.
+Dinge können auf Domänen ebenen getrennt werden.
+
+#### Forest
+
+Multiple Forest
+Mehrer Stammdomänen -> unterschiedliche Schemas.
+Domänen sind parallel zueinander.
+Zwei verbundene ADs
+ 
+
+
