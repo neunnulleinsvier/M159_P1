@@ -97,4 +97,5 @@ Domänen sind parallel zueinander.
 Zwei verbundene ADs
  
 
+regsvr32 schmmgmt.dll
 
